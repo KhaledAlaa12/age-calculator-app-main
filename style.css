@@ -27,7 +27,7 @@ body {
   position: relative;
   padding-bottom: 35px;
   padding-right: 60px;
-  border-bottom: 1px solid hsl(0, 0%, 86%);
+  border-bottom: 1px solid;
 }
 .container form button {
   border: none;

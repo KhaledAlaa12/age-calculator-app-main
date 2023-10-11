@@ -85,14 +85,16 @@ button.onclick = function () {
       month.style.borderColor = "hsl(0, 0%, 86%)";
       if (eMonth >= month.value) {
         months.innerHTML = eMonth - month.value;
-      } else {
-        months.innerHTML = month.value;
+      } else if (month.value > eMonth) {
+        months.innerHTML = 12 - (month.value - eMonth);
       }
     }
     if (year.value <= 2023) {
       yearE.innerHTML = "";
       year.style.borderColor = "hsl(0, 0%, 86%)";
       years.innerHTML = eYear - year.value;
+    }if (month.value > eMonth) {
+      years.innerHTML = eYear - year.value - 1;
     }
   }
 };
